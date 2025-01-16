@@ -5,7 +5,7 @@ public:
         int longest_length;
         int max_length;
         for (int right=0, left=0; right<s.size(); right++){
-            left = max[table[s[right]], left];
+            left = max(table[s[right]], left);
             max_length = right - left + 1;
             table[s[right]] = right + 1;
         }
